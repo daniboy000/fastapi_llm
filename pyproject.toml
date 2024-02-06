@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "fastapi-llm"
+version = "0.1.0"
+description = ""
+authors = ["Daniel Besen de Aguiar <daniel.bdaguiar@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.2"
+
+
+[tool.poetry.group.dev.dependencies]
+uvicorn = "^0.27.0.post1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
