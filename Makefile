@@ -10,7 +10,7 @@ lint: ruff mypy
 .PHONY: runserver
 runserver:
 	@echo "Running server..."
-	poetry run uvicorn fastapi-llm.main:app --host $(HOST) --port $(PORT) --reload
+	poetry run uvicorn fastapi_llm.main:app --host $(HOST) --port $(PORT) --reload
 
 .PHONY: venv
 venv:
@@ -27,22 +27,22 @@ install:
 .PHONY: tests
 tests:
 	@echo "Running tests..."
-	poetry run pytest --cov=coding_challenges --cov-report=html --cov-report=term-missing
+	poetry run pytest --cov=fastapi_llm --cov-report=html --cov-report=term-missing
 
 .PHONY: ruff
 ruff:
 	@echo "Running ruff..."
-	poetry run ruff check coding_challenges
+	poetry run ruff check fastapi_llm
 
 .PHONY: ruff-format
 ruff-format:
 	@echo "Running ruff-formatter..."
-	poetry run ruff format coding_challenges
+	poetry run ruff format fastapi_llm
 
 .PHONY: mypy
 mypy:
 	@echo "Running mypy..."
-	poetry run mypy coding_challenges
+	poetry run mypy fastapi_llm
 
 .PHONE: clean
 clean:
