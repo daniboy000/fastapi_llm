@@ -12,6 +12,15 @@ fastapi = "^0.109.2"
 
 [tool.poetry.group.dev.dependencies]
 uvicorn = "^0.27.0.post1"
+ruff = "*"
+mypy = "*"
+pre-commit = "*"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "*"
+pytest-cov = "*"
+httpx = "*"
 
 [build-system]
 requires = ["poetry-core"]
