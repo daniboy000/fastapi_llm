@@ -1,0 +1,21 @@
+fail_fast: true
+repos:
+- repo: local
+  hooks:
+    - id: ruff
+      name: ruff
+      entry: poetry run ruff check
+      language: system
+      types: [ file, python ]
+      args: ['--fix']
+    - id: ruff-format
+      name: ruff-format
+      entry: poetry run ruff format
+      language: system
+      types: [ file, python ]
+    - id: mypy
+      name: mypy
+      entry: poetry run mypy
+      language: system
+      types: [ file, python ]
+      exclude: tests/
